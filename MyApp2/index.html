@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div id="pinEntry" class="pin-entry">
+    <h2>Enter PIN</h2>
+    <input type="password" id="pinInput" placeholder="Enter your PIN">
+    <button onclick="checkPIN()">Submit</button>
+</div>
+
+<div id="appContent" style="display: none;">
+    <header>Password Manager</header>
+
+    <div id="writeSection" class="section">
+        <h2>Write</h2>
+        <div class="input-container">
+            <input required id="passwordInput" type="password" placeholder="Password">
+            <input id="emailInput" type="email" placeholder="Email (Optional)">
+        </div>
+        <button onclick="saveData()">Save</button>
+    </div>
+
+    <nav>
+        <button id="savedBtn" onclick="showSavedPasswords()">Saved Passwords</button>
+    </nav>
+
+    <div id="savedSection" class="section" style="display: none;">
+        <h2>Saved Passwords</h2>
+        <ul id="savedData" class="saved-data">
+            <!-- Saved passwords will be displayed here -->
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
